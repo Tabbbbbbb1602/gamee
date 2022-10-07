@@ -13,11 +13,6 @@ public class MainMenu : MonoBehaviour
         /*UiManager.Instance.OnGameStateChanged += showMainMenu;*/
     }
 
-    private void showMainMenu(GameState obj)
-    {
-        gameObject.SetActive(true);
-    }
-
     public void ShowSettings(GameObject setting)
     {
         setting.SetActive(true);

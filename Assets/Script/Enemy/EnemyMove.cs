@@ -60,12 +60,11 @@ public class EnemyMove : MonoBehaviour
 
     public void obstaclePlayer()
     {
-        if(countObstaclePlayer.transform.childCount == 0)
+        if(countObstaclePlayer.transform.childCount == 2)
         {
             GameObject gameObjCube = GameObject.Find("Ball(Clone)");
             Destroy(gameObjCube);
-            loseGame.SetActive(true);
-            gameLoad.SetActive(false);
+            UIManager.Ins.loseGame();
             Time.timeScale = 0;
         }
     }

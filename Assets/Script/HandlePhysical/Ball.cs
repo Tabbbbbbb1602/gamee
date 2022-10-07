@@ -5,9 +5,6 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     Transform enemy;
-    // Start is called before the first frame update
-    public bool canThrow = false;
-
     private Rigidbody rb;
 
     Vector3 lastVelocity;

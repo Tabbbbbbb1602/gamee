@@ -1,75 +1,30 @@
 using System.Collections;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class UiManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
-    public static UiManager Instance;
-    public GameState State;
-
-    public event Action<GameState> OnGameStateChanged;
-
-    private void Awake()
+    public UnityEvent OnVictory;
+    public UnityEvent OnLose;
+    public UnityEvent OnChangeTextCoins;
+    // Start is called before the first frame update
+    
+    //phat su kien win game
+     public void winGame()
     {
-        Instance = this;
+        OnVictory?.Invoke();
     }
 
-    private void Start()
+    //phat su kien lose game
+    public void loseGame()
     {
-        UpdateGameState(GameState.mainMenu);
-        UpdateGameState(GameState.gameLoad);
-        UpdateGameState(GameState.settings);
+        OnLose?.Invoke();
     }
 
-    public void UpdateGameState(GameState newState)
+    public void changeTextCoins()
     {
-        State = newState;
-
-        switch (newState)
-        {
-            case GameState.mainMenu:
-                showMainMenu();
-                break;
-            case GameState.gameLoad:
-                showGameLoad();
-                break;
-            case GameState.game:
-                break;
-            case GameState.settings:
-                StateSettings();
-                break;
-            case GameState.lose:
-                break;
-            case GameState.victory:
-                break;
-            default:
-                throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
-        }
-        OnGameStateChanged?.Invoke(newState);
+        OnChangeTextCoins?.Invoke();
     }
 
-    private void StateSettings()
-    {
-        
-    }
-
-    private void showGameLoad()
-    {
-        
-    }
-
-    private void showMainMenu()
-    {
-        
-    }
-}
-
-public enum GameState{
-    mainMenu,
-    gameLoad,
-    game,
-    settings,
-    lose,
-    victory
 }

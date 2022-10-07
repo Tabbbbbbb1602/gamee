@@ -828,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3119336867197999858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.5, z: -25}
+  m_LocalPosition: {x: 1.62, y: 1.32, z: -25}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -852,7 +852,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 20a6c2432de789342b05b35519828995, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -895,8 +895,10 @@ MonoBehaviour:
   PosBall: {fileID: 850387465877216276, guid: 71b0edba18756d04bb5f46283d731ef9, type: 3}
   Ball: {fileID: 850387465877216280, guid: 71b0edba18756d04bb5f46283d731ef9, type: 3}
   countObstacleEnemy: {fileID: 0}
-  winGame: {fileID: 0}
-  gameLoad: {fileID: 0}
+  winGame: {fileID: 7091961300382721424, guid: 8773039075e1fa744924fcca5a0d553d, type: 3}
+  gameLoad: {fileID: 3171787014154010762, guid: d079d265ee68f1042bb2acc7245397b9, type: 3}
+  partialVictory: {fileID: 5354285372252394254, guid: e1f37212726edcf4699abc1e906124d0, type: 3}
+  isVictory: 0
 --- !u!114 &3337381011948827913
 MonoBehaviour:
   m_ObjectHideFlags: 0

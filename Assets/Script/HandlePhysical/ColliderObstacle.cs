@@ -48,6 +48,10 @@ public class ColliderObstacle : MonoBehaviour
                     Destroy(gameObject);
                     Instantiate(ps, transform.position, transform.rotation);
                     FindObjectOfType<AudioManager>().Play("collider");
+                    if(collision.transform.GetComponent<ColliderBall>().tag == "Player")
+                    {
+                        UIManager.Ins.changeTextCoins();
+                    }
                 }
             }
 

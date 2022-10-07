@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class GUIManager : Singleton<GUIManager>
 {
@@ -22,4 +23,7 @@ public class GUIManager : Singleton<GUIManager>
         if (coinCountingText)
             coinCountingText.text = "" + Pref.Coins;
     }
+
+ 
+
 }

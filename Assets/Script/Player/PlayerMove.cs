@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -79,13 +79,12 @@ public class PlayerMove : MonoBehaviour
 
     public void obstacleEnemy()
     {
-        if(countObstacleEnemy.transform.childCount == 0 && !isVictory)
+        if (countObstacleEnemy.transform.childCount == 0 && !isVictory)
         {
             GameObject gameObjCube = GameObject.Find("Ball(Clone)");
             Destroy(gameObjCube);
             Instantiate(partialVictory, transform.position, transform.rotation);
-            gameLoad.SetActive(false);
-            winGame.SetActive(true);
+            UIManager.Ins.winGame();
             isVictory = true;
             m_animator.SetBool("isRunning", false);
         }

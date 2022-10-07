@@ -11,6 +11,8 @@ TagManager:
   - BallEnemy
   - BallPlayer
   - Wall
+  - Effects
+  - UI
   layers:
   - Default
   - TransparentFX

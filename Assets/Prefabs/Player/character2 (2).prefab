@@ -269,6 +269,8 @@ GameObject:
   - component: {fileID: 329878963284977950}
   - component: {fileID: 5941334225386238820}
   - component: {fileID: -6263804224248647153}
+  - component: {fileID: -526534041430063869}
+  - component: {fileID: -8995495168374899255}
   m_Layer: 0
   m_Name: character2 (2)
   m_TagString: Untagged
@@ -304,10 +306,10 @@ Animator:
   m_GameObject: {fileID: 1141705969597281188}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2d226e59912d0014fbf2646ed5c4b916, type: 3}
-  m_Controller: {fileID: 9100000, guid: ffedb2f5908e2024099cad7660c7b2ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: 20a6c2432de789342b05b35519828995, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -327,6 +329,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 0
+--- !u!143 &-526534041430063869
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141705969597281188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 3.6
+  m_Radius: 1.12
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &-8995495168374899255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141705969597281188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da0a32ded207df4e9ab6f24ac28f34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 10
+  rotationSpeed: 3
+  ballSpeed: 60
+  PosBall: {fileID: 850387465877216276, guid: 71b0edba18756d04bb5f46283d731ef9, type: 3}
+  Ball: {fileID: 850387465877216280, guid: 71b0edba18756d04bb5f46283d731ef9, type: 3}
+  countObstacleEnemy: {fileID: 0}
+  winGame: {fileID: 7091961300382721424, guid: 8773039075e1fa744924fcca5a0d553d, type: 3}
+  gameLoad: {fileID: 3171787014154010762, guid: d079d265ee68f1042bb2acc7245397b9, type: 3}
+  partialVictory: {fileID: 5354285372252394254, guid: e1f37212726edcf4699abc1e906124d0, type: 3}
+  isVictory: 0
 --- !u!1 &1165928661974140122
 GameObject:
   m_ObjectHideFlags: 0

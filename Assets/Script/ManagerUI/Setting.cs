@@ -11,8 +11,4 @@ public class Setting : MonoBehaviour
     {
     }
 
-    private void showSettings(GameState obj)
-    {
-        gameObject.SetActive(true);
-    }
 }

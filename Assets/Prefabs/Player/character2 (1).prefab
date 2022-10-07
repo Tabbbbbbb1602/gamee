@@ -2388,7 +2388,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6985617337175234860}
   - component: {fileID: 3896116293712872278}
+  - component: {fileID: 7194260452956018658}
   - component: {fileID: -191764368490882923}
+  - component: {fileID: 3254606678522046181}
   m_Layer: 0
   m_Name: character2 (1)
   m_TagString: Untagged
@@ -2424,16 +2426,38 @@ Animator:
   m_GameObject: {fileID: 7762575561772467094}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2d226e59912d0014fbf2646ed5c4b916, type: 3}
-  m_Controller: {fileID: 9100000, guid: ffedb2f5908e2024099cad7660c7b2ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: 20a6c2432de789342b05b35519828995, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7194260452956018658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762575561772467094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3da0a32ded207df4e9ab6f24ac28f34f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpeed: 10
+  rotationSpeed: 3
+  ballSpeed: 60
+  PosBall: {fileID: 850387465877216276, guid: 71b0edba18756d04bb5f46283d731ef9, type: 3}
+  Ball: {fileID: 850387465877216280, guid: 71b0edba18756d04bb5f46283d731ef9, type: 3}
+  countObstacleEnemy: {fileID: 0}
+  winGame: {fileID: 7091961300382721424, guid: 8773039075e1fa744924fcca5a0d553d, type: 3}
+  gameLoad: {fileID: 3171787014154010762, guid: d079d265ee68f1042bb2acc7245397b9, type: 3}
+  partialVictory: {fileID: 5354285372252394254, guid: e1f37212726edcf4699abc1e906124d0, type: 3}
+  isVictory: 0
 --- !u!114 &-191764368490882923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2447,6 +2471,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 0
+--- !u!143 &3254606678522046181
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7762575561772467094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 3.6
+  m_Radius: 1.12
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &7782503550389549115
 GameObject:
   m_ObjectHideFlags: 0
